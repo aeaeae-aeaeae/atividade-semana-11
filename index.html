@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAMEVAULT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">GAMEVAULT</div>
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="#">INÍCIO</a></li>
+                <li><a href="#">JOGOS</a></li>
+                <li><a href="#">GÊNEROS</a></li>
+                <li><a href="#">NOTÍCIAS</a></li>
+                <li><a href="#">SOBRE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+
+        <div class="conteudo-layout">
+
+            <div class="conteudo-dir">
+
+                <section class="banner-principal">
+                    <img src="https://picsum.photos/id/96/4752/3168/" alt="Banner">
+                    <h2>Seu portal de recomendações e notícias de jogos</h2>
+                    <button class="botao-explorar">Explorar Jogos</button>
+                </section>
+
+                <section class="destaques">
+                    <h3>JOGOS EM DESTAQUE</h3>
+                    <div class="grid-jogos" id="grid-jogos"></div>
+                </section>
+            </div>
+
+            <section class="secao-generos">
+                <h3>GÊNEROS POPULARES</h3>
+                <div class="botoes-genero">
+                    <button class="btn-genero">Ação</button>
+                    <button class="btn-genero">Aventura</button>
+                    <button class="btn-genero">Esportes</button>
+                    <button class="btn-genero">RPG</button>
+                    <button class="btn-genero">Simulação</button>
+                    <button class="btn-genero">Terror</button>
+                </div>
+
+                <div class="noticias-lateral">
+                    <h3>NOTÍCIAS RECENTES</h3>
+
+                    <article class="noticia-item">
+                        <span class="noticia-data">11/09/2026</span>
+                        <h4>Estúdio indie declara falência</h4>
+                        <a href="#" class="link-noticia">Ler mais</a>
+                    </article>
+
+                    <article class="noticia-item">
+                        <span class="noticia-data">14/09/2026</span>
+                        <h4>Outro estúdio indie declara falência</h4>
+                        <a href="#" class="link-noticia">Ler mais</a>
+                    </article>
+
+                    <article class="noticia-item">
+                        <span class="noticia-data">17/09/2026</span>
+                        <h4>MAIS UM estúdio indie declara falência</h4>
+                        <a href="#" class="link-noticia">Ler mais</a>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+
+        <section class="secao-newsletter">
+            <div class="newsletter-texto">
+                <h3>RECEBA NOVIDADES E PROMOÇÕES!</h3>
+            </div>
+
+            <form class="form-novidades" onsubmit="event.preventDefault();">
+                <div class="campos-grupo">
+                    <input type="text" placeholder="Nome:" required>
+                    <input type="email" placeholder="E-mail:" required>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                    <span class="texto-botao">ENVIAR</span>
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="sociais">
+            <span>Siga-nos:</span> 
+            <span><a href="https://instagram.com" target="_blank">Instagram</a></span> 
+            <span><a href="https://discord.com" target="_blank">Discord</a></span> 
+            <span><a href="https://x.com" target="_blank">X</a></span> 
+        </div>
+        <div class="copyright">© 2026 GameVault</div>
+    </footer>
+</body>
+</html>

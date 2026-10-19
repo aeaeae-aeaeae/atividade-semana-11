@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+header.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #31235a;
+    border-bottom: 3px solid #c1aae6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header.cabecalho .logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+nav.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+}
+
+nav.menu-navegacao li {
+    margin-left: 20px;
+}
+
+nav.menu-navegacao a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav.menu-navegacao a:hover {
+    background-color: #c1aae6;
+    color: #31235a;
+}
+
+section.banner-principal {
+    text-align: center;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+section.banner-principal img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+section.banner-principal h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+section.banner-principal .botao-explorar {
+    padding: 12px 30px;
+    background-color: #4c3b80;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(76, 59, 128, 0.3);
+}
+
+section.banner-principal .botao-explorar:hover {
+    background-color: #c1aae6;
+    color: #31235a;
+    transform: translateY(-2px);
+}
+
+section.botao-explorar .botao-explorar:active {
+    transform: scale(0.95);
+}
+
+section.destaques {
+    padding: 0;
+}
+
+section.destaques h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-jogo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+article.card-jogo {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid #eef0f5;
+}
+
+article.card-jogo img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card-jogo-link:hover article.card-jogo {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(49, 35, 90, 0.15);
+    border-color: #c1aae6;
+}
+
+
+article.card-jogo h4 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.card-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.card-titulo h4 {
+    font-size: 14px;
+    color: #222;
+    font-weight: 700;
+    white-space: nowrap;
+    max-width: 110px;
+}
+
+.card-nota {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ff9800;
+    background-color: #fff8e1;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+article.card-jogo p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+section.secao-generos {
+    flex: 1;
+    max-width: 250px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.botoes-genero {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.secao-generos h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #31235a;
+    border-left: 4px solid #4c3b80;
+    padding-left: 10px;
+}
+
+.botoes-genero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-genero {
+    padding: 12px;
+    background-color: #f4f4f9;
+    color: #4c3b80;
+    border: 1px solid #e2e2e9;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 6px;
+    padding-left: 15px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.btn-genero:hover {
+    background-color: #c1aae6;
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+.btn-genero:active {
+    transform: scale(0.95);
+}
+
+section.secao-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #31235a;
+    margin: 0 50px 50px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(49, 35, 90, 0.2);
+}
+
+.newsletter-texto h3 {
+    font-size: 16px;
+    max-width: 250px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+form.form-novidades {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.campos-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form.form-novidades input {
+    padding: 12px 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(227, 204, 240, 0.11);
+    border-radius: 6px;
+    width: 320px;
+    font-size: 13px;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+form.form-novidades input:focus {
+    background-color: rgba(255,255,255,0.15);
+    outline: none;
+    border-color: #c1aae6;
+}
+
+form.form-novidades .btn-enviar {
+    padding: 15px 35px;
+    background-color: #c1aae6;
+    color: #31235a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form.form-novidades .btn-enviar:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+form.form-novidades:valid .btn-enviar:active {
+    background-color: #2e7d32 !important;
+    color: white !important;
+}
+
+form.form-novidades:valid:focus-within .btn-enviar:focus {
+    background-color: #2e7d32 !important;
+    color: white !important;
+}
+
+form.form-novidades:valid:focus-within .btn-enviar:focus .texto-botao {
+    font-size: 0;
+}
+
+form.form-novidades:valid:focus-within .btn-enviar:focus::after {
+    content: "ENVIADO!";
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+footer.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #1f143d;;
+    font-size: 13px;
+    width: 100%;
+}
+
+footer.rodape .sociais span {
+    margin-right: 15px;
+    font-weight: 600;
+    color: #c1aae6;
+}
+
+footer.rodape .sociais a {
+    color: inherit; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer.rodape .sociais a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer.rodape .copyright {
+    color: #c1aae6;
+}
+
+.conteudo-layout {
+    display: flex;
+    padding: 0 50px;
+    gap: 35px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.conteudo-dir {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section.destaques {
+    padding: 0;
+}
+
+.noticias-lateral {
+    margin-top: 35px;
+    border-top: 2px solid #f4f4f9;
+    padding-top: 20px;
+}
+
+.noticias-laterais h3 {
+    font-size: 13px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #31235a;
+    border-left: 4px solid #4c3b80;
+    padding-left: 10px;
+}
+
+article.noticia-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e2e2e9;
+}
+
+article.noticia-item:last-child {
+    border-bottom: none;
+}
+
+.noticia-data {
+    font-size: 10px;
+    color: #a0a0b0;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+article.noticia-item h4 {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+article.noticia-item a.link-noticia {
+    font-size: 11px;
+    color: #4c3b80;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+article.noticia-item a.link-noticia:hover {
+    color: #c1aae6;
+    text-decoration: underline;
+}
+
+
+.pagina-detalhes {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.detalhes-jogo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detalhes-jogo h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #31235a;
+}
+
+.detalhes-principais {
+    display: grid;
+    grid-template-columns: 400px minmax(0, 1fr) 180px;
+    gap: 32px;
+    align-items: start;
+}
+
+.detalhes-principais > img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    align-self: start;
+    margin-top: -100px;
+}
+
+.informacoes-jogo {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 80px;
+}
+
+.informacoes-jogo p {
+    margin: 0;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.informacoes-jogo .nota-detalhes {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4c3b80;
+}
+
+.plataformas-jogo h2 {
+    margin: 0 0 18px;
+    font-size: 1.2rem;
+    color: #31235a;
+}
+
+.icones-plataformas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.icones-plataformas a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e9;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icones-plataformas a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(49, 35, 90, 0.15);
+}
+
+.icones-plataformas img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.descricao-jogo {
+    border-top: 1px solid #dcd8e8;
+    padding-top: 20px;
+}
+
+.descricao-jogo h2 {
+    margin: 0 0 12px;
+    font-size: 1.5rem;
+    color: #31235a;
+}
+
+.descricao-jogo p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .detalhes-principais {
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .plataformas-jogo {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .pagina-detalhes {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .detalhes-jogo h1 {
+        font-size: 1.7rem;
+        overflow-wrap: anywhere;
+        position: relative;
+        z-index: 1;
+    }
+
+    .detalhes-principais {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .detalhes-principais > img {
+        width: 100%;
+        max-width: 100%;
+        height: 420px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .informacoes-jogo {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .plataformas-jogo {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    header.cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    nav.menu-navegacao ul {
+        display: flex;
+        flex-wrap: wrap;       
+        justify-content: center;
+        gap: 10px;
+    }
+
+     nav.menu-navegacao li {
+        margin-left: 0;
+    }
+
+     nav.menu-navegacao a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+
+    .conteudo-layout {
+        flex-direction: column;
+        padding: 15px;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    section.secao-generos {
+        max-width: 100%;
+    }
+
+    .botoes-genero {
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-jogos {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-dir {
+        width: 100%;
+    }
+
+    section.banner-principal img {
+        max-height: 200px;
+    }
+
+    section.secao-newsletter { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center; 
+        margin: 20px; 
+        padding: 30px 20px; 
+    }
+
+    form.form-novidades { 
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+    form.form-novidades input { 
+        width: 100%; 
+    }
+
+    footer.rodape { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center; 
+        padding: 25px 20px; 
+    }
+}
